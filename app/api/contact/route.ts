@@ -4,7 +4,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM    = "Léni Whitford <onboarding@resend.dev>";
-const TO_LENI = "leni.whitford@orange.fr";
+const TO_LENI = process.env.CONTACT_EMAIL ?? "joah.milo.zach@gmail.com";
 
 export async function POST(req: NextRequest) {
   try {
