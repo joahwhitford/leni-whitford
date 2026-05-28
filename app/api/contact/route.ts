@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend("re_gLA6UMY6_HJh175X4S6eVNva2uscmeS5L");
 
 const FROM    = "Léni Whitford <onboarding@resend.dev>";
-const TO_LENI = process.env.CONTACT_EMAIL ?? "joah.milo.zach@gmail.com";
+const TO_LENI = "joah.milo.zach@gmail.com";
 
 export async function POST(req: NextRequest) {
   try {
