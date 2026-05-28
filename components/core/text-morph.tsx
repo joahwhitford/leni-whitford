@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 interface TextMorphProps {
   children: string;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 export function TextMorph({ children: text, className, as: Tag = 'span' }: TextMorphProps) {
