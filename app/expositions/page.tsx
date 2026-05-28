@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -76,6 +76,14 @@ const groups: YearGroup[] = [
 // ── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ExpositionsPage() {
+  return (
+    <Suspense>
+      <ExpositionsContent />
+    </Suspense>
+  );
+}
+
+function ExpositionsContent() {
   const [selected, setSelected] = useState<Exhibition | null>(null);
   const searchParams = useSearchParams();
 
